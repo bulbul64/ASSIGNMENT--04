@@ -7,6 +7,22 @@ import { allBtn, currentTab, interviewBtn, jobsContainer, rejectedBtn } from "./
  
  export function jobsRender(filteredJobs) {
  document.getElementById("job-length").innerText = filteredJobs.length
+ if(filteredJobs.length === 0){
+   return `
+   <section class="bg-white text-center p-20 ">
+   <div>
+      <div class="flex justify-center">
+         <div>
+            <img src="jobs.png" alt="">
+         </div>
+      </div>
+      <h2 class="text-[#002C5C] font-semibold text-lg">No jobs available</h2>
+      <p>Check back soon for new job opportunities</p>
+   </div>
+</section>
+   
+   `
+ }
   let allJobs = ""
   filteredJobs.map((job) => {
     allJobs += `
@@ -53,3 +69,4 @@ export function currentTabRender(){
   else filteredJobs = jobs.filter(j => j.status === currentTab)
   jobsContainer.innerHTML = jobsRender(filteredJobs)
 }
+

@@ -8,7 +8,7 @@ export const jobs = [
     salary: "$125,000 - $165,000",
     statusLabel: "NOT APPLIED",
     description: "Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.",
-    status: "rejected"
+    status: "all"
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const jobs = [
     salary: "$110,000 - $145,000",
     statusLabel: "NOT APPLIED",
     description: "Develop scalable web platforms using Node.js and React. Maintain REST APIs and manage cloud deployments.",
-    status: "rejected"
+    status: "all"
   },
   {
     id: 4,

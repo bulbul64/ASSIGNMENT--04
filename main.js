@@ -37,3 +37,22 @@ rejected.addEventListener("click", () => {
   currentTabRender()
 })
 
+
+// status event add
+
+jobsContainer.addEventListener("click", function(e){
+  const id = e.target.dataset.id
+  console.log(id)
+  const jobId = jobs.find(j => j.id == id)
+  console.log(jobId)
+  
+  if (e.target.classList.contains("interview-btn")) {
+     jobId.status = "interview"
+     jobId.statusLabel = "APPLIED"
+  }
+   if (e.target.classList.contains("rejected-btn")) {
+     jobId.status = "rejected"
+     jobId.statusLabel = "NOT APPLIED"
+  }
+  currentTabRender()
+})
