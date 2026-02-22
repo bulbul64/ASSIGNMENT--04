@@ -27,7 +27,7 @@ import { allBtn, currentTab, interviewBtn, jobsContainer, rejectedBtn } from "./
   filteredJobs.map((job) => {
     allJobs += `
       
-      <div class="shadow-md rounded-lg bg-white md:p-8 p-4">
+      <div class="shadow-md rounded-lg bg-white md:p-8 p-4 ">
    <div class="flex justify-between items-center mb-3">
       <h2 class="text-[#002C5C] font-semibold text-lg md:text-xl">${job.companyName}</h2>
       <button class="btn btn-sm btn-error delete-btn" data-id="${job.id}">Delete</button>
