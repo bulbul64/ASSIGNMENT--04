@@ -30,5 +30,12 @@
  console.log(allJobs)
  return allJobs
 }
+ 
+// btn color change function add  
 
-
+function activeButton(button){
+  allBtn.classList.remove("btn-primary")
+  interview.classList.remove("btn-primary")
+  rejected.classList.remove("btn-primary")
+  button.classList.add("btn-primary")
+}
