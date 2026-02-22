@@ -68,5 +68,16 @@ export function currentTabRender(){
   if(currentTab === "all"){ filteredJobs = jobs}
   else filteredJobs = jobs.filter(j => j.status === currentTab)
   jobsContainer.innerHTML = jobsRender(filteredJobs)
+  jobsCount(jobs)
+}
+
+export function jobsCount(jobs){
+ const totalCount = document.getElementById("total-count")
+  const interViewCount = document.getElementById("interview-count")
+  const rejectedCount = document.getElementById("rejected-count")
+  totalCount.innerText = jobs.length
+  interViewCount.innerText = jobs.filter((j) => j.status === "interview").length
+  rejectedCount.innerText = jobs.filter((j) => j.status === "rejected").length
+
 }
 
