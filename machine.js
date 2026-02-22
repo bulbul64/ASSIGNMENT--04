@@ -1,6 +1,7 @@
 //  jobsRender function 
 
-import { allBtn, interviewBtn, rejectedBtn } from "./main.js"
+import { jobs } from "./data.js"
+import { allBtn, currentTab, interviewBtn, jobsContainer, rejectedBtn } from "./main.js"
 
 
  
@@ -42,4 +43,13 @@ export function activeButton(button){
   interviewBtn.classList.remove("btn-primary")
   rejectedBtn.classList.remove("btn-primary")
   button.classList.add("btn-primary")
+}
+
+//  current Tab Render function add
+
+export function currentTabRender(){
+  let filteredJobs = []
+  if(currentTab === "all"){ filteredJobs = jobs}
+  else filteredJobs = jobs.filter(j => j.status === currentTab)
+  jobsContainer.innerHTML = jobsRender(filteredJobs)
 }
