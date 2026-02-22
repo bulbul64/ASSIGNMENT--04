@@ -1,4 +1,8 @@
 //  jobsRender function 
+
+import { allBtn, interviewBtn, rejectedBtn } from "./main.js"
+
+
  
  export function jobsRender(filteredJobs) {
  document.getElementById("job-length").innerText = filteredJobs.length
@@ -27,15 +31,15 @@
       
       `
   })
- console.log(allJobs)
+//  console.log(allJobs)
  return allJobs
 }
  
 // btn color change function add  
 
-function activeButton(button){
+export function activeButton(button){
   allBtn.classList.remove("btn-primary")
-  interview.classList.remove("btn-primary")
-  rejected.classList.remove("btn-primary")
+  interviewBtn.classList.remove("btn-primary")
+  rejectedBtn.classList.remove("btn-primary")
   button.classList.add("btn-primary")
 }
